@@ -28,10 +28,10 @@
             }
             for (let i = 1; i <= photoNumber; i++) {
                 let img = document.createElement("img")
-                img.src = "ressources\\diving photos\\"+String(i)+".JPG"
+                img.src = "ressources\\diving photos\\low\\"+String(i)+".JPG"
                 img.width = 200
                 let a = document.createElement("a")
-                a.href = "ressources\\diving photos\\"+String(i)+".JPG"
+                a.href = "ressources\\diving photos\\full\\"+String(i)+".JPG"
                 a.appendChild(img)
                 div.appendChild(a)
             }
@@ -48,7 +48,8 @@
 
     <section id="diving">
 
-            <h2>Plongée et photographie sous marine</h2>
+        <h2>Plongée et photographie sous marine</h2>
+        <p></p>
 
         <div id="photos">
         </div>
