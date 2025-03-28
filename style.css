@@ -11,7 +11,7 @@ html {
     outline: transparent;
 }
 
-body, button {
+body {
     margin: 0;
     font-family: 'Bricolage Grotesque', Arial, Helvetica, sans-serif;
     background-color: var(--background);
@@ -367,17 +367,17 @@ footer {
 
 #photos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px); /* The max amount of columns of 200px */
+    grid-template-columns: repeat(auto-fill, 220px); /* The max amount of columns of 200px */
     justify-content: center; /* Center the columns */
     gap: 20px;
-
     width: 100%;
-    max-width: calc(6*220px - 20px);
+    padding: 0 calc(25% - 200px);
     margin: 0px 20px;
 }
-@media (max-width: 460px) {
+
+@media (max-width: 600px) {
     #photos {
-        grid-template-columns: repeat(2, minmax(0px, 200px));
+        grid-template-columns: repeat(2, minmax(0px, 220px));
     }
 }
 
@@ -390,11 +390,11 @@ footer {
 }
 
 #button-container {
-    margin-top: 20px;
+    margin-top: 40px;
     align-self: end;
     display: flex;
-    gap: 20px;
-    margin-right: calc(20% - 100px);
+    gap: 20px;    
+    margin-right: 15%;
 }
 
 button {
