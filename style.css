@@ -11,7 +11,7 @@ html {
     outline: transparent;
 }
 
-body {
+body, button {
     margin: 0;
     font-family: 'Bricolage Grotesque', Arial, Helvetica, sans-serif;
     background-color: var(--background);
@@ -55,7 +55,7 @@ p {
         margin-bottom: 40px;
         margin-top: 10px;
     }
-    
+
     h2 {
         font-size: 22px;
         margin-top: 60px;
@@ -65,7 +65,7 @@ p {
     p, a {
         font-size: 14px;
     }
-}  
+}
 
 a {
     -webkit-tap-highlight-color: transparent;
@@ -88,39 +88,39 @@ section, footer {
 }
 
 section:nth-child(1) {
-    background-color: var(--primary);    
+    background-color: var(--primary);
     color: var(--on-primary);
     font-weight: 500;
     font-size: 24px;
 }
 
 section:nth-child(2) {
-    background-color: var(--primary-container);    
+    background-color: var(--primary-container);
     color: var(--on-primary-container);
 }
 
 section:nth-child(3) {
-    background-color: var(--primary);    
+    background-color: var(--primary);
     color: var(--on-primary);
 }
 
 section:nth-child(4) {
-    background-color: var(--secondary-container);    
+    background-color: var(--secondary-container);
     color: var(--on-secondary-container);
 }
 
 section:nth-child(5) {
-    background-color: var(--secondary);    
+    background-color: var(--secondary);
     color: var(--on-secondary);
 }
 
 section:nth-child(6) {
-    background-color: var(--tertiary-container);    
+    background-color: var(--tertiary-container);
     color: var(--on-tertiary-container);
 }
 
 section:nth-child(7) {
-    background-color: var(--tertiary);    
+    background-color: var(--tertiary);
     color: var(--on-tertiary);
 }
 
@@ -193,7 +193,7 @@ footer {
     color: var(--inverse-on-surface);
 }
 
-#topbar > a:active > .topbar-menu {    
+#topbar > a:active > .topbar-menu {
     border-color: var(--on-surface);
 }
 
@@ -285,7 +285,7 @@ footer {
     transition-duration: 0.4s;
 }
 
-.project:hover {    
+.project:hover {
     box-shadow: var(--shadow) 0 0 20px;
 }
 
@@ -359,53 +359,47 @@ footer {
 
 #diving-photos {
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
 }
 
 #photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 calc(20% - 150px);
-    margin: 0px;
-    margin-bottom: 20px;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px); /* The max amount of columns of 200px */
+    justify-content: center; /* Center the columns */
+    gap: 20px;
 
-#photos a{
-    flex-basis: min(calc(48% - 20px), 220px);
-    aspect-ratio: 11/8;
-    margin: 10px;
-    justify-content: center;
-}
-
-#photos img { 
-    margin: 0;
-    padding: 0;
     width: 100%;
-    height: 100%;
-    object-fit:cover;
+    max-width: calc(6*220px - 20px);
+    margin: 0px 20px;
+}
+@media (max-width: 460px) {
+    #photos {
+        grid-template-columns: repeat(2, minmax(0px, 200px));
+    }
+}
+
+#photos img {
+    width: 100%;
+    aspect-ratio: 11/8;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: var(--shadow) 0 0 10px;
 }
 
-#photos .placeholder {
-    flex-basis: min( calc(48% - 20px), 220px);
-    margin: 10px;
-    height: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 #button-container {
+    margin-top: 20px;
+    align-self: end;
     display: flex;
-    justify-content: end;
-    padding: 0 calc(20% - 100px);
-    margin: 0px;
+    gap: 20px;
+    margin-right: calc(20% - 100px);
 }
 
 button {
     padding: 5px 20px;
     border-radius: 20px;
-    margin-right: 20px;
     text-align: center;
     border: none;
     background: inherit;

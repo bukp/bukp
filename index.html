@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html>
-    
+
 <head>
     <title>Paul Bukowski</title>
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
@@ -17,11 +17,11 @@
     function load() {
         updatePhotos()
     }
-    
+
     const min_photos = 12
     const totalPhotos = 38
     let current = 0
-    
+
     function updatePhotos(photoNumber = min_photos) {
 
         current = photoNumber
@@ -40,12 +40,6 @@
             div.appendChild(a)
         }
 
-        for (let i=0; i<10; i++) {
-            let fake = document.createElement("div")
-            fake.className = "placeholder"
-            div.appendChild(fake)
-        }
-
         if (current <= min_photos) {
             document.getElementById("less").style.display = "none"
             document.getElementById("more").style.display = "block"
@@ -61,7 +55,7 @@
     function modifyPhotos(n) {
         if (n < 0) {
             updatePhotos(Math.max(min_photos, current + n))
-            
+
         } else {
             if (current + 2*n > totalPhotos) {
                 updatePhotos(totalPhotos)
@@ -73,7 +67,7 @@
 </script>
 
 <body onload="load()">
-    
+
     <div id="topbar-blur-bg">
         <div id="topbar">
             <a href="#presentation">
@@ -114,20 +108,20 @@
                         Je projette d'entrer en école d'ingénieur pour travailler plus tard dans le développement de logiciel.
                     </p>
                     <p>
-                        Je suis passionné de Mathématiques et d'Informatiques. 
+                        Je suis passionné de Mathématiques et d'Informatiques.
                         J'adore apprendre sur de nouveaux sujets, scientifiques ou non et j'aime apprendre aux autres ce que j'ai compris.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="school" style="display: none;">
 
     </section>
 
     <section id="achievements" style="display: none;">
-        
+
     </section>
 
     <section class="inter-section">
@@ -202,15 +196,15 @@
             </h2>
             <p>
                 Depuis petit, j'ai toujours passé une grande partie de mon temps dans l'eau.
-                J'ai commencé la natation à 6 ans (et je continue), j'ai fais du snorkeling en mer (palme, masque et tuba) et à 8 ans j'ai fais mon baptème de plongée.
+                J'ai commencé la natation à 6 ans (et je continue), j'ai fais du snorkeling en mer (palme, masque et tuba) et à 8 ans j'ai fais mon baptême de plongée.
             </p>
             <p>
                 J'ai aujourd'hui passé les niveaux 1 et 2 de la <a href="https://ffessm.fr/">Fédération Française de Plongée</a> ce qui me permet de plonger encadré jusqu'à 40 mètres de profondeur.
             </p>
             <p>
-                En 2021, j'ai rejoint le <a href="https://www.phoc.fr/">PHOC</a>, un club de plongée où je nage chaque semaine. Avec eux, j'ai obtenu mon niveau 2 ainsi que le <a href="https://ffessm.fr/rifa-plongee">RIFAP</a>, et je prépare actuellement le niveau 3 afin de plonger jusqu’à 60 mètres.            </p>
+                En 2021, j'ai rejoint le <a href="https://www.phoc.fr/">PHOC</a>, un club de plongée où je nage chaque semaine. Avec eux, j'ai obtenu mon niveau 2 ainsi que le <a href="https://ffessm.fr/rifa-plongee">RIFAP</a>, et je prépare actuellement le niveau 3 afin de plonger jusqu’à 60 mètres.</p>
             <p>
-                J'ai, depuis que j'ai commencé, comptabilisé plus d'une centaine de plongées dans plusieurs environnements différents : dans le Golf du Morbihan, en Mer Mediterrannée (Sud de la France et Nord de l'Espagne), en Mer Rouge (Egypte) et à Bali.
+                J'ai, depuis que j'ai commencé, comptabilisé plus d'une centaine de plongées dans plusieurs environnements différents : dans le Golf du Morbihan, en Mer Méditerranée (Sud de la France et Nord de l'Espagne), en Mer Rouge (Égypte) et à Bali.
             </p>
             <p>
                 Lors de mon premier voyage en Egypte, en 2022, j'ai expérimenté pour la première fois la photographie sous-marine avec un ancien appareil de mon père que j'emmène depuis avec moi dans toutes mes plongées depuis.
@@ -222,7 +216,7 @@
         <h2>Mes photos de plongée</h2>
 
         <div id="photos">
-            <!-- Will be filled with the photos by javascript -->
+            <!-- Will be filled with the photos by JavaScript -->
         </div>
         <div id="button-container">
             <button id="less" class="see-more-button" onclick="updatePhotos()">voir moins</button>
