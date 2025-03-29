@@ -385,7 +385,7 @@ footer {
     text-shadow: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 620px) {
     #projects {
         padding-left: 3%;
         padding-right: 3%;
