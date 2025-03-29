@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -32,10 +32,10 @@
         }
         for (let i = 1; i <= photoNumber; i++) {
             let img = document.createElement("img")
-            img.src = "ressources\\diving photos\\low\\"+String(i)+".JPG"
+            img.src = "ressources/diving photos/low/"+String(i)+".JPG"
             img.width = 200
             let a = document.createElement("a")
-            a.href = "ressources\\diving photos\\full\\"+String(i)+".JPG"
+            a.href = "ressources/diving photos/full/"+String(i)+".JPG"
             a.appendChild(img)
             div.appendChild(a)
         }
@@ -75,9 +75,14 @@
                     Home
                 </div>
             </a>
+            <a href="#skills">
+                <div class="topbar-menu">
+                    Skills
+                </div>
+            </a>
             <a href="#programming-projects">
                 <div class="topbar-menu">
-                    Projets
+                    Projects
                 </div>
             </a>
             <a href="#diving-photos">
@@ -85,47 +90,120 @@
                     Photos
                 </div>
             </a>
-            <a href="#">
-                <div class="topbar-menu">
-                    .....
-                </div>
-            </a>
         </div>
     </div>
     <div>
     <section id="presentation">
-        <div class="text-container">
+        <div class="content">
             <div class="sided">
                 <div>
-                    <img id="profile-photo" src="ressources\\profile.JPG" alt="">
+                    <img id="profile-photo" src="ressources/profile.JPG" alt="">
                 </div>
                 <div id="pres-text">
                     <h1>
                         Paul Bukowski
                     </h1>
+                    <h3>
+                        Lycéen en Terminale Générale et bientôt étudiant, aspirant à devenir ingénieur logiciel.
+                    </h3>
                     <p>
-                        Lycéen en Terminale Générale Section Européenne au Lycée de la Herdrie avec les spécialités Maths, Physique-Chimie et l'option Maths Expertes.
-                        Je projette d'entrer en école d'ingénieur pour travailler plus tard dans le développement de logiciel.
-                    </p>
-                    <p>
-                        Je suis passionné de Mathématiques et d'Informatiques.
-                        J'adore apprendre sur de nouveaux sujets, scientifiques ou non et j'aime apprendre aux autres ce que j'ai compris.
+                        Passionné de Mathématiques et d'Informatique depuis toujours, j'espère un jour en faire mon métier.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="school" style="display: none;">
-
+    <section id="school">
+        <div class="content">
+            <h2>
+                Scolarité
+            </h2>
+            <p>
+                J'ai toujours eu des facilités en mathématiques et dans les matières scientifiques en général ce qui m'a permis de m'intéresser de mon côté à d'autres sujets comme la programmation par exemple.
+                J'ai toujours aimé apprendre et utiliser mes connaissances pour aider les autres quand ils rencontrent des difficultés.
+            </p>
+            <p>
+                Au lycée, j'ai choisi les spécialités Mathématiques, Physique-Chimie et NSI ainsi que l'option Maths Expertes en Terminale dans l'optique d'intégrer après le Bac une CPGE ou une prépa intégrée et de devenir ingénieur.
+            </p>
+            <p>
+                Je me suis souvent avancé sur le programme en mathématiques, parfois avec l'aide des professeurs qui me donnaient des activités supplémentaires.
+                Cela m'a permis de me classer 7e de l'académie de Nantes aux <a href="https://www.education.gouv.fr/les-olympiades-nationales-de-mathematiques-5732">Olympiades nationales de Mathématiques</a> et de participer au <a href="https://www.education.gouv.fr/le-concours-general-des-lycees-et-des-metiers-un-prix-d-excellence-10022">Concours Général des Lycées de Mathématiques</a>.
+            </p>
+            <p>
+                En 5ème j'ai intégré la <a href="https://www.education.gouv.fr/les-sections-europeennes-ou-de-langues-orientales-en-lycee-5048">Section Européenne</a> que j'ai ensuite continué au lycée et avec laquelle j'ai fait un voyage à Bath en 1ère.
+                Cela m'a permis, pendant ces 6 ans, d'améliorer considérablement mon niveau d'expression et de compréhension en anglais.
+            </p>
+        </div>
     </section>
 
-    <section id="achievements" style="display: none;">
-
+    <section id="skills">
+        <div class="content">
+            <h2>Compétences</h2>
+            <div class="skill-card">
+                <span>langages</span>
+                <div>
+                    <div class="skill">
+                        <img src="ressources/skills/python.png" alt="">
+                        <div class="skill-label">Python</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/html.png" alt="">
+                        <div class="skill-label">HTML/CSS/JS</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/rust.png" alt="">
+                        <div class="skill-label">Rust</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <span>Outils</span>
+                <div>
+                    <div class="skill">
+                        <img src="ressources/skills/vscode.png" alt="">
+                        <div class="skill-label">VSCode</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/github.png" alt="">
+                        <div class="skill-label">Git & Github</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/windows.png" alt="">
+                        <div class="skill-label">Windows</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/linux.png" alt="">
+                        <div class="skill-label">Linux</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <span>Autres</span>
+                <div>
+                    <div class="skill">
+                        <img src="ressources/skills/permis.png" alt="">
+                        <div class="skill-label">Permis de Conduire</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/anglais.png" alt="">
+                        <div class="skill-label">Anglais Section Euro</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/pix.png" alt="">
+                        <div class="skill-label">Informatique (685&nbsp;PIX)</div>
+                    </div>
+                    <div class="skill">
+                        <img src="ressources/skills/bac.png" alt="">
+                        <div class="skill-label">Baccalauréat (bientôt)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="inter-section">
-        <div class="text-container">
+        <div class="content">
             <h2>
                 Programmation informatique
             </h2>
@@ -135,13 +213,14 @@
             </p>
             <p>
                 En entrant au collège j'ai découvert <a href="https://scratch.mit.edu/">Scratch</a>, avec lequel j'ai créé plusieurs petits jeux pour moi et mes amis.
-                Enfin, en entrant au lycée, j'ai appris <a href="https://www.python.org/">Python</a>, avec lequel au bout de quelques mois je connaissais déjà bien plus que tout ce qu'on m'en apprendrait.
+                Enfin, en entrant au lycée, j'ai appris <a href="https://www.python.org/">Python</a>, avec lequel j'ai beaucoup expérimenté sur mon temps personnel.
             </p>
             <p>
-                Avec les cours de NSI en 1ère, j'ai découvert de nombreuses notions que j'ai approfondies par moi même en dehors des cours. J'ai ainsi appris beaucoup en algorithmie, structures de données, protocoles de communications / web et API.
+                Avec les cours de NSI en 1ère, j'ai découvert de nombreuses notions que j'ai approfondies par moi-même en dehors des cours. J'ai ainsi appris beaucoup en algorithmie, structures de données, protocoles de communications, le web et API.
             </p>
             <p>
-                J'ai mené de mon côté plusieurs projets personnels qui m'ont permi d'apprendre <a href="https://developer.mozilla.org/fr/docs/Web/HTML">HTML</a>/<a href="https://developer.mozilla.org/fr/docs/Web/CSS">CSS</a> plus profondément et le language de programmation <a href="https://www.rust-lang.org/fr">Rust</a> pour les nombreuses possibilités qu'il offre face à <a href="https://www.python.org/">Python</a>.
+                J'ai mené de mon côté plusieurs projets personnels qui m'ont permis d'apprendre <a href="https://developer.mozilla.org/fr/docs/Web/HTML">HTML</a>/<a href="https://developer.mozilla.org/fr/docs/Web/CSS">CSS</a> plus profondément et le langage de programmation <a href="https://www.rust-lang.org/fr">Rust</a> pour les nombreuses possibilités qu'il offre face à <a href="https://www.python.org/">Python</a>.
+                Cela m'a aussi permis d'expérimenter Linux et la ligne de commande.
             </p>
         </div>
     </section>
@@ -151,7 +230,7 @@
         <div id="projects">
             <div class="project">
                 <div>
-                    <img src="ressources\\projects\\little-chess-game.JPG" alt="">
+                    <img src="ressources/projects/little-chess-game.JPG" alt="">
                 </div>
                 <div>
                     <p><a href="https://github.com/bukp/little-chess-game">Little Chess Game</a></p>
@@ -159,7 +238,7 @@
             </div>
             <div class="project">
                 <div>
-                    <img src="ressources\\projects\\ST-map.JPG" alt="">
+                    <img src="ressources/projects/ST-map.JPG" alt="">
                 </div>
                 <div>
                     <p><a href="https://github.com/bukp/space-traders-map">Space Traders map</a></p>
@@ -167,7 +246,7 @@
             </div>
             <div class="project">
                 <div>
-                    <img src="ressources\\projects\\this-website.JPG" alt="">
+                    <img src="ressources/projects/this-website.JPG" alt="">
                 </div>
                 <div>
                     <p><a href="https://github.com/bukp/bukp">Mon Site Web</a></p>
@@ -175,7 +254,7 @@
             </div>
             <div class="project">
                 <div>
-                    <img src="ressources\\projects\\coming-soon.JPG" alt="">
+                    <img src="ressources/projects/coming-soon.JPG" alt="">
                 </div>
                 <div>
                     <p><a href="https://github.com/bukp/vector-race">Vector Race</a></p>
@@ -190,24 +269,24 @@
     </section>
 
     <section class="inter-section">
-        <div class="text-container">
+        <div class="content">
             <h2>
                 Plongée sous-marine
             </h2>
             <p>
                 Depuis petit, j'ai toujours passé une grande partie de mon temps dans l'eau.
-                J'ai commencé la natation à 6 ans (et je continue), j'ai fais du snorkeling en mer (palme, masque et tuba) et à 8 ans j'ai fais mon baptême de plongée.
+                J'ai commencé la natation à 6 ans (et je continue), j'ai fait du snorkeling en mer (palme, masque et tuba) et à 8 ans j'ai fait mon baptême de plongée.
             </p>
             <p>
-                J'ai aujourd'hui passé les niveaux 1 et 2 de la <a href="https://ffessm.fr/">Fédération Française de Plongée</a> ce qui me permet de plonger encadré jusqu'à 40 mètres de profondeur.
+                J'ai le niveau 2 de la <a href="https://ffessm.fr/">Fédération française de plongée</a> ce qui me permet de plonger encadré jusqu'à 40 mètres de profondeur.
             </p>
             <p>
-                En 2021, j'ai rejoint le <a href="https://www.phoc.fr/">PHOC</a>, un club de plongée où je nage chaque semaine. Avec eux, j'ai obtenu mon niveau 2 ainsi que le <a href="https://ffessm.fr/rifa-plongee">RIFAP</a>, et je prépare actuellement le niveau 3 afin de plonger jusqu’à 60 mètres.</p>
+                En 2021, j'ai rejoint le <a href="https://www.phoc.fr/">PHOC</a>, un club de plongée où je nage chaque semaine. J'ai obtenu mon niveau 2 ainsi que le <a href="https://ffessm.fr/rifa-plongee">RIFAP</a> dans ce club, et j'y prépare actuellement le niveau 3 afin de plonger jusqu'à 60 mètres.</p>
             <p>
-                J'ai, depuis que j'ai commencé, comptabilisé plus d'une centaine de plongées dans plusieurs environnements différents : dans le Golf du Morbihan, en Mer Méditerranée (Sud de la France et Nord de l'Espagne), en Mer Rouge (Égypte) et à Bali.
+                J'ai, depuis que j'ai commencé, comptabilisé plus d'une centaine de plongées dans plusieurs environnements différents : dans le Golfe du Morbihan, en Mer Méditerranée (Sud de la France et Nord de l'Espagne), en Mer Rouge (Égypte) et à Bali.
             </p>
             <p>
-                Lors de mon premier voyage en Egypte, en 2022, j'ai expérimenté pour la première fois la photographie sous-marine avec un ancien appareil de mon père que j'emmène depuis avec moi dans toutes mes plongées depuis.
+                Lors de mon premier voyage en Égypte, en 2022, j'ai découvert la photographie sous-marine avec un ancien appareil de mon père que j'emmène depuis avec moi dans toutes mes plongées.
             </p>
         </div>
     </section>

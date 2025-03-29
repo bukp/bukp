@@ -13,34 +13,44 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Bricolage Grotesque', Arial, Helvetica, sans-serif;
+    font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+    font-weight: 300;
     background-color: var(--background);
     color: var(--on-background);
     user-select: none;
     overflow-x: hidden;
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-align: center;
-    font-family: "Boldonse", Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-weight: 900;
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 48px;
     text-decoration: underline;
     margin-bottom: 40px;
     margin-top: 10px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 38px;
     margin-top: 60px;
     margin-bottom: 80px;
 }
 
+h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+}
+
 p, a {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 p {
@@ -50,20 +60,20 @@ p {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 28px;
-        text-decoration: underline;
-        margin-bottom: 40px;
-        margin-top: 10px;
+        font-size: 38px;
     }
 
     h2 {
+        font-size: 32px;
+    }
+
+
+    h3 {
         font-size: 22px;
-        margin-top: 60px;
-        margin-bottom: 80px;
     }
 
     p, a {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -74,6 +84,7 @@ a {
 a:any-link {
     text-decoration: none;
     color: inherit;
+    text-shadow: rgba(255, 255, 255, 0.935) 0px 0px 2px;
 }
 
 a:hover {
@@ -137,12 +148,8 @@ footer {
     clip-path: none;
 }
 
-.inter-section a:any-link, footer a:any-link {
-    text-shadow: rgba(255, 255, 255, 0.644) 0px 0px 2px;
-}
-
-.text-container {
-    max-width: calc(20% + 800px);
+.content {
+    max-width: calc(40% + 800px);
     padding: 0 10% 60px 10%;
     margin-left: auto;
     margin-right: auto;
@@ -186,6 +193,7 @@ footer {
     transition-duration: 0.1s;
     color: var(--on-surface);
     border: 1px solid transparent;
+    text-shadow: none;
 }
 
 #topbar > a:hover > .topbar-menu  {
@@ -206,11 +214,6 @@ footer {
     padding-top: 100px;
 }
 
-#presentation .text-container {
-    padding-left: 0%;
-    padding-right: 0%;
-}
-
 .sided {
     display: flex;
     flex-wrap: wrap;
@@ -221,23 +224,14 @@ footer {
     margin-top: 50px;
 }
 
-.sided > div:nth-child(1) {
+.sided > div {
     flex-shrink: 0;
     flex-grow: 0;
     flex: 1;
-    min-width: 10cm;
+    min-width: 380px;
     max-width: 600px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sided > div:nth-child(2) {
-    flex-shrink: 0;
-    flex-grow: 0;
-    flex: 1;
-    min-width: 10cm;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -251,13 +245,78 @@ footer {
 #pres-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
+    padding-top: 8%;
+    padding-bottom: 60px;
 }
 
-#pres-text p {
+#pres-text * {
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.skill-card:nth-of-type(odd) {
+    margin-left: auto;
+}
+
+.skill-card:nth-of-type(even) {
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    .skill-card {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.skill-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--primary-container);
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--on-primary-container);
+    min-width: 60%;
+}
+
+.skill-card > span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card > div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    margin: 10px;
+}
+
+.skill > img {
+    width: 50px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin: 10px;
 }
 
 #projects {
