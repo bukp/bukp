@@ -320,98 +320,95 @@ footer {
 }
 
 #projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(250px, calc(50% - 40px)));
+    gap: 40px;
     justify-content: center;
-    border-color: red;
+
     padding: 0 max(calc(50% - 290px * 2), 10%);
     margin: 0px;
     margin-bottom: 40px;
 }
 
 .project {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    width: min(250px, calc(50% - 40px));
+    border-radius: 15px 15px 25px 25px;
+
     background-color: var(--surface-bright);
-    flex-basis: 1;
+    overflow: hidden;
     box-shadow: var(--shadow) 0 0 10px;
     transition-duration: 0.4s;
+
+    flex-basis: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .project:hover {
     box-shadow: var(--shadow) 0 0 20px;
 }
 
-.project > div:nth-child(1) {
-    flex: 1;
-    padding: 10px;
-}
-
-.project > div:nth-child(1) > img {
-    width: 100%;
-    height: 100%;
+.project > img, .project > .iframe-container {
+    width: calc(100% - 2*10px);
+    margin: 10px;
     aspect-ratio: 9/8;
-    border-radius: 10px;
+    border-radius: 5px;
     object-fit: cover;
 }
 
-.project > div:nth-child(2) {
-    background-color:var(--surface-variant);
+.project .iframe-container {
+    position: relative;
+}
+
+.project iframe {
+    --scale: 0.5;
+    border-radius: 5px;
+
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: calc((1/var(--scale)) * 100%);
+    height: calc((1/var(--scale)) * 100%);
+
+    transform: scale(var(--scale));
+}
+
+.project > a {
+    width: 100%;
+
     color: var(--on-surface);
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 600;
+
+    background-color:var(--surface-variant);
     border-top: 4px dotted var(--outline);
 }
 
-.project > div:nth-child(2) p {
-    text-align: center;
-    margin: 16px 0;
-    font-weight: 600;
-}
-
-#projects .placeholder{
-    width: 250px;
-    margin: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 @media (max-width: 550px) {
-
     #projects {
         padding-left: 3%;
         padding-right: 3%;
-    }
-
-    .project {
-        margin: 10px;
-        width: min(250px, calc(50% - 22px));
+        grid-template-columns: repeat(auto-fill, min(250px, calc(50% - 22px)));
+        gap: 20px;
     }
 }
 
 @media (max-width: 400px) {
-    .project > div:nth-child(1) {
-        padding: 8px;
+    .project > img, .project > .iframe-container {
+        width: calc(100% - 2*8px);
+        margin: 8px;
     }
 
-    .project > div:nth-child(2) p {
+    .project > a {
         font-weight: 400;
-        margin: 8px 0;
-    }
-
-    .project > div:nth-child(2) a {
+        padding: 8px 0;
         font-size: 12px;
     }
 }
 
 @media (max-width: 300px) {
-    .project > div:nth-child(2) a {
+    .project > a {
         font-size: 10px;
     }
 }
