@@ -376,6 +376,8 @@ footer {
     left: 50%;
     width: calc((1/var(--scale)) * 100%);
     height: calc((1/var(--scale)) * 100%);
+
+    border-radius: calc(5px * 1/var(--scale));
     
     transform: scale(var(--scale)) translate(calc(-50%/var(--scale)), calc(-50%/var(--scale)));
 }
