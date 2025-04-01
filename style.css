@@ -194,6 +194,7 @@ footer {
     color: var(--on-surface);
     border: 1px solid transparent;
     text-shadow: none;
+    font-family: "Roboto Condensed";
 }
 
 #topbar > a:hover > .topbar-menu  {
@@ -459,6 +460,7 @@ button {
     text-align: center;
     border: none;
     background: inherit;
+    font-family: inherit;
     color: var(--tertiary-container);
     border: 2px solid var(--tertiary-container);
     transition-duration: 0.2s;
