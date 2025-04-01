@@ -84,7 +84,7 @@ a {
 a:any-link {
     text-decoration: none;
     color: inherit;
-    text-shadow: rgba(255, 255, 255, 0.935) 0px 0px 2px;
+    text-shadow: rgba(255, 255, 255, 0.935) 0px 0px 1.5px;
 }
 
 a:hover {
@@ -172,37 +172,44 @@ footer {
     width: 100%;
     opacity: 0.7;
     overflow: hidden;
-    padding-right: 10px;
-}
-
-#topbar a {
-    flex: 1;
-    max-width: 150px;
+    padding: 0 5px;
 }
 
 .topbar-menu {
+    flex: 1;
+    max-width: 120px;
     text-align: center;
     align-self: stretch;
     font-weight: 600;
     border-radius: 30px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin: 10px 10px;
-    margin-right: 0;
+    padding: 7px 15px;
+    margin: 10px 5px;
     flex: 1;
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
     color: var(--on-surface);
     border: 1px solid transparent;
     text-shadow: none;
     font-family: "Roboto Condensed";
+    font-size: 16px;
 }
 
-#topbar > a:hover > .topbar-menu  {
+@media (max-width: 400px) {
+    .topbar-menu {
+        font-size: 12px;
+    }
+}
+
+#topbar > .topbar-menu:any-link  {
+    text-shadow: none;
+}
+
+#topbar > .topbar-menu:hover  {
     background-color: var(--inverse-surface);
     color: var(--inverse-on-surface);
+
 }
 
-#topbar > a:active > .topbar-menu {
+#topbar > .topbar-menu:active {
     border-color: var(--on-surface);
 }
 
